@@ -1,0 +1,20 @@
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    hasDuplicate(nums) {
+       let map = {};
+        for(let i =0; i < nums.length; i++){
+            if(map[nums[i]] === undefined){ //if there is a spot empty then add it
+                map[nums[i]] = i;
+            }
+            else{
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+//hashtable, HT: 1: True 2: 
